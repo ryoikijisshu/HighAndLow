@@ -9,11 +9,45 @@
 
     <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:layout_height="50dp"
+            android:text="このカードは..."
+            android:id="@+id/text"
+            android:textSize="30sp" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/uracard" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="103dp" android:layout_marginStart="103dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"/>
+    <Button
+            android:text="7未満"
+            android:layout_width="142dp"
+            android:layout_height="68dp"
+            android:id="@+id/sevenlow"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="32dp" android:layout_marginStart="32dp"
+            android:layout_marginBottom="40dp"
+            android:onClick="onSevenlowButtonTapped" app:layout_constraintEnd_toStartOf="@+id/onemore"
+            android:layout_marginEnd="32dp" android:layout_marginRight="32dp"/>
+    <ImageView
+            android:layout_width="232dp"
+            android:layout_height="331dp" app:srcCompat="@drawable/ura"
+            android:id="@+id/uracard"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="32dp" android:layout_marginEnd="32dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp" app:layout_constraintHorizontal_bias="0.495"
+            android:layout_marginTop="140dp"
+            android:layout_marginBottom="90dp" app:layout_constraintBottom_toTopOf="@+id/sevenlow"/>
+    <Button
+            android:text="7以上"
+            android:layout_width="142dp"
+            android:layout_height="68dp"
+            android:id="@+id/onemore" android:textSize="30sp" android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp" app:layout_constraintStart_toEndOf="@+id/sevenlow"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp" android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:onClick="onSevenhighButtonTapped"/>
 
 </android.support.constraint.ConstraintLayout>
