@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HighAndLow</string>
+    <string name="result_win">あなたの勝ちです</string>
+    <string name="result_lose">あなたの負けです</string>
 </resources>
