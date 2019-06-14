@@ -11,14 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        up.setOnClickListener{
-            onButtonTapped(it)
-        }
-
-        down.setOnClickListener{
-            onButtonTapped(it)
-        }
     }
 
     fun onButtonTapped(view: View?){
