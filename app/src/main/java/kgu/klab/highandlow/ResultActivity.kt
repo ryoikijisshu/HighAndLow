@@ -15,6 +15,7 @@ class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
+        val mytrump=intent.extras.get("myid")
         val trump1=1
         val trump2=2
         val trump3=3
@@ -70,6 +71,12 @@ class ResultActivity : AppCompatActivity() {
                 resultimage.setImageResource(R.drawable.thirteen)
             }
         }
+        if(mytrump==1&&trump<7||mytrump==2&&trump>=7){
+            resulttext.text="勝ち"
+        }else{
+            resulttext.text="負け"
+        }
+
         returnbutton.setOnClickListener{
             val intent=Intent(application,MainActivity::class.java)
             startActivity(intent)

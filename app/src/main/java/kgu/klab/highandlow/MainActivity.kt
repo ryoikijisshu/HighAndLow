@@ -13,11 +13,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         button.setOnClickListener{onbuttonTapped(it)}
+        button2.setOnClickListener{onbutton2Tapped(it)}
+
 
     }
     fun onbuttonTapped(view: View?){
         val intent= Intent(this,ResultActivity::class.java)
-        intent.putExtra("trump",view?.id)
+        intent.putExtra("myid",1)
+        startActivity(intent)
+    }
+    fun onbutton2Tapped(view: View?){
+        val intent= Intent(this,ResultActivity::class.java)
+        intent.putExtra("myid",2)
         startActivity(intent)
     }
 }
